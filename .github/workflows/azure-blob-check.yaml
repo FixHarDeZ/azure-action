@@ -23,10 +23,10 @@ jobs:
         run: |
           az storage account list --output table
     
-      - name: List blobs in container
-        run: |
-          az storage blob list \
-            --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
-            --container-name ${{ vars.AZURE_CONTAINER_NAME }} \
-            --auth-mode login \
-            --output table
+    #   - name: List blobs in container
+    #     run: |
+    #       az storage blob list \
+    #         --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
+    #         --container-name ${{ vars.AZURE_CONTAINER_NAME }} \
+    #         --auth-mode login \
+    #         --output table
