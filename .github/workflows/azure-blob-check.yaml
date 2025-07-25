@@ -15,6 +15,14 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Account list
+        run: |
+          az account list --output table
+
+      - name: List Azure Storage Accounts
+        run: |
+          az storage account list --output table
+    
       - name: List blobs in container
         run: |
           az storage blob list \
